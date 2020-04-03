@@ -4,6 +4,7 @@ import SignInPage from "./Project/SignIn/SignInPage/SignInPage";
 import SignUpPage from "./Project/SignIn/SignUpPage/SignUpPage";
 import HomePage  from "./Project/SignIn/HomePage/HomePage"
 import history from './history';
+
 export default class Routes extends Component {
     render() {
         return (
@@ -11,7 +12,7 @@ export default class Routes extends Component {
                 <Switch>
                     <Route path="/" exact component={SignInPage} />
                     <Route path="/SignUpPage" component={SignUpPage} />
-                    <Route path="/HomePage" component={HomePage} />
+                    <Route path="/HomePage/:name/:email/:id" component={HomePage} />
                 </Switch>
             </Router>
         )

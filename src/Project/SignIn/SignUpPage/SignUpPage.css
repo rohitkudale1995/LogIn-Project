@@ -8,9 +8,6 @@
     box-sizing: border-box;
     
 }
-.background {
-    background-image: url("../../../Image/bg1.jpg");
- }
 .heading{
     color: limegreen;
     text-align: center;
@@ -36,4 +33,59 @@
     margin: -4px 0px 0px 0px; 
     font-size: xx-large; 
     padding: 0 5px 0 0; 
+}
+
+.imgsize{
+    margin-left: 40%;
+    margin-right: 10%;
+}
+.Img1{
+    margin-left: 20%;
+    height: 100px;
+}
+.Img2{
+   margin-top: 40%;
+   margin-left: 10%;
+height: 100px;
+    
+}
+.margintr{
+text-align: center;
+margin-left: 10%;
+
+}
+.textcol{
+    color: gainsboro;
+}
+.infotag{
+  margin-top: -2%;
+ background-color: whitesmoke;
+ width: 96%;
+ margin-left: 2%;
+ margin-right: 2%;
+ border: 4px solid #eee;
+}
+.navDiv{
+    background-color: whitesmoke;  
+}
+.BgImage{
+    background-image: url('../../../Image/bg2.jpg');
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    
+}
+.DashBoard{
+margin-left:80px;
+width:100%;
+
+}
+.td2{
+height: 100%;
+}
+.DashBoardcolor{
+text-align: center;
+color: darkmagenta;
+border-bottom: 5px solid  darkmagenta;
+height:120px;
 }

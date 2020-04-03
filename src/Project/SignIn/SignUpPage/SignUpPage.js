@@ -13,6 +13,8 @@ class SignUpPage extends Component {
             Email: '',
             Password:'',
             RePassword: '',
+            Time: new Date().getTime(),
+            status:'Success'
     },
         formIsValid: false,
         loading: false,
@@ -25,6 +27,7 @@ class SignUpPage extends Component {
 if(this.state.UserForm.RePassword.localeCompare(this.state.UserForm.Password)){
 this.setState({msg:"Password And Repassword Not Match"})
 }else{
+  console.log()
         axios.post('http://5e84f969a8fdea00164acf09.mockapi.io/user/v1/user', this.state.UserForm )
             .then( response => {
                 this.setState( );
@@ -61,7 +64,6 @@ this.setState({msg:"Password And Repassword Not Match"})
     <Form.Label>Name</Form.Label>
     </span>
     <Form.Control type="text" className="requiredlabel" placeholder="Enter Name"   required={true} value={this.state.UserForm.Name}  onChange={(event) => this.inputChangedHandler(event, "Name")}/>
-    
   </Form.Group>
   <Form.Group controlId="formBasicEmail">
   <span className="asterisk_input">

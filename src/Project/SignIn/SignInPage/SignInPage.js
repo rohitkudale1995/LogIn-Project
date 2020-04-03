@@ -13,7 +13,10 @@ class SignInPage extends Component {
             Password: '',
             userdata:[],
             loading:false,
-            msg:''
+            msg:'',
+            
+            name:'',
+            id:''
     }  
     orderHandler = ( event ) => {
         event.preventDefault();
@@ -23,7 +26,9 @@ class SignInPage extends Component {
               this.setState({userdata :response.data}); 
               let a=this.state.userdata.map(rep=>{
               if(this.state.Email===rep.Email && this.state.Password===rep.Password)
-              {
+              {this.state.name=rep.Name;
+                this.state.Email=rep.Email;
+                this.state.id=rep.id;
               return true;
               }else
               {
@@ -43,8 +48,9 @@ if(c===a.length)
   this.setState( { loading:false ,msg:'Invalid Email Or Password'} );
 }
 else
-{
-  history.push('/HomePage');
+{ let name1='/HomePage/'+this.state.name+'/'+this.state.Email+'/'+this.state.id;
+  
+this.props.history.push(name1);
 }      
             } )
             .catch( error => {
@@ -63,6 +69,7 @@ else
     }
     render () {
         return (
+          
             <div className="SignInPage">
               <div className="titleH ">  
                    <img src={logo} alt="Not Found"/>
