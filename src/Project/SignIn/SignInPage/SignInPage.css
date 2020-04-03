@@ -1,0 +1,26 @@
+.SignInPage {
+    margin: 20px auto;
+    width: 80%;
+    
+    box-shadow: 0 2px 3px #ccc;
+    border: 1px solid #eee;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.heading{
+    color: limegreen;
+    text-align: center;
+}
+.titleH{
+    text-align: center;
+    font-size: large;
+    font-style: initial;
+    
+}
+@media (min-width: 600px) {
+    .SignInPage {
+        border: 3px solid #73AD21;
+        width: 600px;
+        
+    }
+}
